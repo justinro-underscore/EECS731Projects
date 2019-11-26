@@ -1,0 +1,23 @@
+Do ten-fold verification
+Fit 90% train 10% test then shift it so you still train 90% test 10% but on a different interval
+For time-series, split data into 10 chunks:
+
+|train|test |     |     |     |     |     |     |     |     |
+|train      |test |     |     |     |     |     |     |     |
+|train            |test |     |     |     |     |     |     |
+|train                  |test |     |     |     |     |     |
+|train                        |test |     |     |     |     |
+.
+.
+.
+|train                                                |test |
+
+You can't do typical 10-fold verification because the rest of the data is the future
+
+----
+
+Find standard deviation for all products and choose the one that has the lowest standard deviation to predict
+
+-----
+
+Predict only one product
